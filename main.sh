@@ -3,8 +3,7 @@
 a=10
 dev=0
 #d=20
-b=$(head -6 input.json | tail -1 | cut -d ":" -f2 | sed 's/,//')
-c=
+b=$(jq .env[2].prod.memory input-x.json)
 echo "$b"
 
 #Check one
