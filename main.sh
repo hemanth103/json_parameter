@@ -29,16 +29,16 @@ echo "$1"
 #Check Two
 if [ ${1}  ==  "dev" ]
 then
-    $storage = jq .env[0].dev.memory input-x.json
+    storage=$(jq .env[0].$1.memory input-x.json)
     echo $storage
 
 elif [ ${1}  ==  "it" ]
 then
-    $storage = jq .env[1].dev.memory input-x.json
+    storage=$(jq .env[1].$1.memory input-x.json)
     echo $storage
 
 elif [ ${1}  ==  "prod" ]
 then
-    $storage = jq .env[2].dev.memory input-x.json
+    storage=$(jq .env[2].$1.memory input-x.json)
     echo $storage
 fi
