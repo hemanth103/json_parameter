@@ -17,5 +17,11 @@ pipeline {
 
             }
         }
+        stage('Execute_Shell') {
+            steps {
+                sh "jq '.[]' input-x.json"
+
+            }
+        }
     }
 }
