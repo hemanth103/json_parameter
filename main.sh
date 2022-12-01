@@ -12,16 +12,33 @@ echo "$1"
 #echo "$b"
 
 #Check one
+#if [ ${1}  ==  "dev" ]
+#then
+#    echo "storage is 10"
+#
+#elif [ ${1}  ==  "it" ]
+#then
+#    echo "storage is 20"
+#
+#elif [ ${1}  ==  "prod" ]
+#then
+#    echo "storage is 30"
+#
+#fi
+
+#Check Two
 if [ ${1}  ==  "dev" ]
 then
-    echo "storage is 10"
+    $storage = jq .env[0].dev.memory input-x.json
+    echo $storage
 
 elif [ ${1}  ==  "it" ]
 then
-    echo "storage is 20"
+    $storage = jq .env[1].dev.memory input-x.json
+    echo $storage
 
 elif [ ${1}  ==  "prod" ]
 then
-    echo "storage is 30"
-    
+    $storage = jq .env[2].dev.memory input-x.json
+    echo $storage
 fi
