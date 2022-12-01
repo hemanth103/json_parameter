@@ -20,6 +20,7 @@ pipeline {
         stage('Execute_Shell') {
             steps {
                 sh "jq '.[]' input-x.json"
+                sh "bash -f main.sh"
 
             }
         }
