@@ -4,7 +4,7 @@
 		{
 			"dev": {
 				"cpu": 8,
-				"memory": 10
+				"memory": 33
 			}
 
 		},
@@ -12,14 +12,14 @@
 		{
 			"it": {
 				"cpu": 8,
-				"memory": 20
+				"memory": 66
 			}
 		},
 
 		{
 			"prod": {
 				"cpu": 8,
-				"memory": 30
+				"memory": 99
 			}
 		}
 	]
