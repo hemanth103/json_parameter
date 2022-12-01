@@ -5,7 +5,7 @@ dev=0
 it=1
 prod=2
 #d=20
-b=$(jq .env[$dev]."${params.CHOICE}".memory input-x.json)
+b=$(jq .env[$dev].${params.CHOICE}.memory input-x.json)
 echo "$b"
 
 #Check one
