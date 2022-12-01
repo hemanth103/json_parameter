@@ -1,12 +1,12 @@
-
-#Initializing two variables
-b=10
-dev=0
-it=1
-prod=2
+#
+##Initializing two variables
+#b=10
+#dev=0
+#it=1
+#prod=2
 echo "env: $1"
-echo xxxxxxxxxxxx
-echo "$1"
+#echo xxxxxxxxxxxx
+#echo "$1"
 #d=20
 #b=$(jq .env[$dev].${params}.memory input-x.json)
 #echo "$b"
@@ -27,23 +27,42 @@ echo "$1"
 #fi
 
 #Check Two
+#if [ ${1}  ==  "dev" ]
+#then
+#    storage=$(jq .env[0].dev.memory input-x.json)
+#    echo $storage
+#    echo aaaaaaaaaaaaaaaaaa
+#
+#elif [ ${1}  ==  "it" ]
+#then
+#    storage=$(jq .env[1].it.memory input-x.json)
+#    echo $storage
+#    echo bbbbbbbbbbbbbbbbbbbb
+#
+#elif [ ${1}  ==  "prod" ]
+#then
+#    storage=$(jq .env[2].prod.memory input-x.json)
+#    echo $storage
+#    echo cccccccccccccccccccccc
+#fi
+#
+#echo Final....
+#echo $storage
+
+
+#Check Three
 if [ ${1}  ==  "dev" ]
 then
     storage=$(jq .env[0].dev.memory input-x.json)
-    echo $storage
-    echo aaaaaaaaaaaaaaaaaa
 
 elif [ ${1}  ==  "it" ]
 then
     storage=$(jq .env[1].it.memory input-x.json)
-    echo $storage
-    echo bbbbbbbbbbbbbbbbbbbb
 
 elif [ ${1}  ==  "prod" ]
 then
     storage=$(jq .env[2].prod.memory input-x.json)
-    echo $storage
-    echo cccccccccccccccccccccc
+
 fi
 
 echo Final....
