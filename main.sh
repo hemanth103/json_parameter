@@ -12,13 +12,16 @@ echo "$1"
 #echo "$b"
 
 #Check one
-if [ ${it}  -ge $b ]
+if [ ${1}  ==  "dev" ]
 then
-    echo "a '${params.CHOICE}' is greater than equal to b"
-fi
-  
-#Check two
-if [ $b -le $b ]
+    echo "storage is 10"
+
+elif [ ${1}  ==  "it" ]
 then
-    echo "a is less than equal to b"
+    echo "storage is 20"
+
+elif [ ${1}  ==  "prod" ]
+then
+    echo "storage is 30"
+    
 fi
