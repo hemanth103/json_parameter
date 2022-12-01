@@ -1,17 +1,18 @@
 
 #Initializing two variables
-a=10
+b=10
 dev=0
 it=1
 prod=2
+echo " xxxxxxxxxxxx   ${params.CHOICE}"
 #d=20
-b=$(jq .env[$dev].${params.CHOICE}.memory input-x.json)
-echo "$b"
+#b=$(jq .env[$dev].${params}.memory input-x.json)
+#echo "$b"
 
 #Check one
-if [ $a -ge $b ]
+if [ ${params.CHOICE}  -ge $b ]
 then
-    echo "a is greater than equal to b"
+    echo "a '${params.CHOICE}' is greater than equal to b"
 fi
   
 #Check two
